@@ -32,7 +32,7 @@ const ff = player.querySelector(".skip");
 //create the funtions that will work
 
 function playIcons() {
-    video.paused ? play.innerHTML = '<i class="material-icons" style="font-size:35px">play_arrow</i>' : play.innerHTML = '<i class="material-icons" style="font-size:35px">pause</i>';
+    video.paused ? play.innerHTML = '<i class="material-icons">play_arrow</i>' : play.innerHTML = '<i class="material-icons">pause</i>';
 }
 playIcons();
 
@@ -188,7 +188,7 @@ function videoScrub(e) {
 }
 
 function refreshIcon() {
-    play.innerHTML = '<i class="material-icons" style="font-size:35px">refresh</i>'
+    play.innerHTML = '<i class="material-icons">refresh</i>'
 }
 
 function favorite() {
@@ -211,7 +211,7 @@ function skip() {
 
 
 video.addEventListener("click", translate);
-video.addEventListener("dblclick", togglePlay);
+video.addEventListener("dblclick", resize);
 video.addEventListener("play", playIcons);
 video.addEventListener("pause", playIcons);
 play.addEventListener("click", togglePlay);

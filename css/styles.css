@@ -188,6 +188,10 @@ body .bottom i {
   font-size: 18px;
 }
 
+body .bottom .play i {
+  font-size: 35px;
+}
+
 body .bottom .volume {
   position: relative;
   cursor: pointer;
@@ -335,6 +339,107 @@ video::-webkit-media-controls {
 
 .right {
   margin-top: 20px;
+}
+
+@media screen and (max-width: 900px) {
+  body .player {
+    max-width: 96%;
+    width: 100%;
+  }
+  body .player .bottom {
+    padding: 2px;
+  }
+  body .player .bottom .progress .timer {
+    margin-left: -20px;
+    padding: 2px 6px;
+  }
+  body .player .bottom .progress .timer button {
+    font-size: 10px;
+  }
+  body .player .bottom .quality {
+    margin-top: 2px;
+  }
+  body .player .bottom .quality button {
+    font-size: 10px;
+    padding: 8px 4px;
+    width: 100%;
+  }
+  body .player .bottom .quality .qualities {
+    padding-top: 10px;
+  }
+  body .player .bottom .quality .qualities button {
+    font-size: 10px;
+    padding: 5px 4px;
+  }
+  body .player .bottom .cc button {
+    padding: 1px 6.5px;
+    width: 100%;
+  }
+  body .player .bottom .cc button i {
+    font-size: 15px;
+  }
+  body .player .bottom .cc .captions button {
+    font-size: 6px;
+    padding: 5px 7px;
+    border-bottom: 1px solid rgba(85, 85, 85, 0.5);
+    width: 100%;
+  }
+  body .player .bottom .time {
+    font-size: 13px;
+    margin-top: 11px;
+    font-weight: lighter;
+  }
+  body .player .bottom .skip, body .player .bottom .volume, body .player .bottom .cc {
+    margin-top: 8px;
+  }
+  body .player .bottom .time, body .player .bottom .quality {
+    font-size: 10px;
+  }
+  body .player .bottom i {
+    font-size: 15px;
+  }
+  body .player .bottom .expand {
+    margin-top: 5px;
+  }
+  body .player .bottom .expand button {
+    padding: 0px 2px;
+  }
+  body .player .bottom .expand img {
+    width: 20px;
+  }
+  body .player .bottom .play i {
+    font-size: 24px;
+    margin-top: 5px;
+  }
+  body .top {
+    padding: 3px;
+  }
+  body .top .left button {
+    margin: 0;
+  }
+  body .top .left button i {
+    font-size: 18px;
+  }
+  body .top .left img {
+    width: 50px;
+    margin-top: 5px;
+  }
+  body .top .right {
+    margin: 10px 0px 0px 0px;
+  }
+  body .top .right i {
+    font-size: 18px;
+  }
+  body .top button {
+    background: none;
+    border: 0;
+    color: white;
+    outline: none;
+    margin: 0px 5px;
+  }
+  body .top .fa-heart {
+    padding-top: -55px;
+  }
 }
  
 
