@@ -1,0 +1,297 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Poppins')
+
+/****** Style Star Rating Widget *****/
+
+html 
+  box-sizing: border-box
+
+*, *:before, *:after
+  box-sizing: inherit
+
+button
+  cursor: pointer
+
+body
+  margin: 0
+  padding: 0
+  display: flex
+  background: #141515
+  min-height: 100vh
+  background-size: cover
+  align-items: center
+  justify-content: center
+
+  .player
+    max-width: 60%
+    box-shadow: 0 0 20px rgba(0,0,0,0.2)
+    position: relative
+    font-size: 0
+    overflow: hidden
+    -webkit-box-shadow: 0px -1px 80px 0px #000
+    -moz-box-shadow: 0px -1px 80px 0px #000
+    box-shadow: 0px -1px 80px 0px #000
+
+  .player-video
+    width: 100%
+
+  .bottom    
+    padding: 10px
+    display: flex
+    position: absolute
+    bottom: 0
+    width: 100%
+    transform: translateY(150%)
+    transition: all .9s
+    color: black
+    justify-content: space-between
+    align-content: cemter
+    background: rgba(0,0,0,0.3)
+    
+    button
+      background: none
+      border: 0
+      color: white
+      outline: none
+
+    .progress:hover
+      cursor: pointer
+
+    .progress
+      width: 75%
+      height: 3px
+      background: rgba(255, 255, 255, 0.3)
+      margin-top: 17px
+      position: relative
+      display: flex
+      margin-right: 10px
+
+      .point
+        position: absolute
+        width: 10px
+        height: 10px
+        top: -120%
+        border-radius: 50%
+        background: white
+        margin-left: 0%
+
+      .point:hover
+        cursor: pointer
+
+      .timer
+        margin-left: -22px
+        margin-bottom: 8px
+        position: absolute
+        z-index: 1
+        bottom: 100%
+        padding: 5px 10px
+        border-radius: 20px
+        background-color: rgba(85, 85, 85, 0.5)
+        
+        button
+          font-size: 11px
+
+      .progress-filled
+        width: 50%
+        background: red
+        height: 100%
+        flex-basis: 0%
+
+    .quality
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px
+      position: relative
+      background: transparent
+
+      button
+        font-size: 11px
+        padding: 8px 8px
+        width: 100%
+
+      .qualities
+        display: none
+        position: absolute
+        z-index: 1
+        bottom: 100%
+        padding-top: 10px
+        background-color: rgba(85, 85, 85, 0.5)
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        
+        button
+          font-size: 11px
+          padding: 5px 8px
+          border-bottom: 1px solid rgba(85, 85, 85, 0.5)
+          width: 100%
+
+    .cc
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px
+      position: relative
+
+      button
+        font-size: 11px
+        padding: 1px 11px
+        width: 100%
+
+      .captions
+        display: none
+        position: absolute
+        z-index: 1
+        bottom: 100%
+        padding-top: 10px
+        background-color: rgba(85, 85, 85, 0.5)
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        
+        button
+          font-size: 11px
+          padding: 5px 7px
+          border-bottom: 1px solid rgba(85, 85, 85, 0.5)
+          width: 100%
+
+    .time
+      font-size: 13px
+      margin-top: 9px
+      font-weight: lighter
+
+    .skip, .volume, .cc
+      margin-top: 5px
+
+    .time, .quality
+      font-size: 12px
+
+    i
+      font-size: 18px
+
+    .volume
+      position: relative
+      cursor: pointer
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      user-select: none
+      border-bottom-right-radius: 20px;
+      border-bottom-left-radius: 20px;
+
+      .volume-scrub
+        display: none
+        height: 100px
+        padding: 37%
+        position: absolute
+        z-index: 1
+        bottom: 100%
+        background-color: rgba(85, 85, 85, 0.5)
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        
+        input[type=range][orient=vertical]
+          writing-mode: bt-lr; // IE */
+          -webkit-appearance: slider-vertical; //* WebKit */
+          width: 4px;
+          height: 100%;
+          padding: 0 2px;
+
+        .volume-filler
+          position: absolute
+          width: 10%
+          height: 70%
+          top: 20%
+          left: 45%
+          right: 50%
+          background-color: rgba(255, 255, 255, 0.3)
+          z-index: 1000
+
+        .volume-filled
+          position: absolute
+          width: 10%
+          height: 60%
+          top: 20%
+          left: 45%
+          right: 50%
+          margin-top: 15px
+          margin-bottom: 10px
+          background-color: red
+          z-index: 2000
+
+
+  .top
+    padding: 10px
+    display: flex
+    position: absolute
+    top: 0
+    width: 100%
+    transform: translateY(-100%)
+    transition: all .9s
+    background: rgba(0,0,0,0.1)
+    justify-content: space-between
+
+    button
+      background: none
+      border: 0
+      color: white
+      outline: none
+      margin: 0px 5px
+
+    .fa-heart
+      padding-top: -55px
+
+  .player:click .bottom, .player:click .top
+    transform: translateY(0)
+
+
+/*Chrome*/
+@media screen and (-webkit-min-device-pixel-ratio: 0)
+    input[type='range']
+      overflow: hidden
+      width: 80px
+      -webkit-appearance: none
+      background-color: #9a905d
+    
+    
+    input[type='range']::-webkit-slider-runnable-track 
+      height: 10px
+      -webkit-appearance: none
+      color: #13bba4
+      margin-top: -1px
+    
+    input[type='range']::-webkit-slider-thumb 
+      width: 10px
+      -webkit-appearance: none
+      height: 10px
+      cursor: pointer
+      background: red
+      box-shadow: -80px 0 0 80px red
+    
+
+/** FF*/
+input[type="range"]::-moz-range-progress
+  background-color: red
+
+input[type="range"]::-moz-range-track
+  background-color: red
+
+/* IE*/
+input[type="range"]::-ms-fill-lower
+  background-color: red
+
+input[type="range"]::-ms-fill-upper
+  background-color: #9a905d
+
+.player:fullscreen 
+  max-width: 100%
+  width: 100%
+  height: 100vh
+
+.player:-webkit-full-screen 
+  max-width: 100%
+  width: 100%
+  height: 100vh
+
+video::-webkit-media-controls-enclosure 
+  display:none !important
+
+video::-webkit-media-controls 
+  display:none !important
+
+.right
+  margin-top: 20px

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+</head>
+
+<body>
+
+    <div class="player">
+        <video src="vid/star_wars.mp4" class="player-video viewer" fullscreenEnabled></video>
+
+        <div class="top" style="transform:translateY(-100%)">
+            <div class="left">
+                <button><i class="material-icons" style="font-size:36px">keyboard_arrow_left</i></button>
+                <button><img src="img/last-jedi.png" alt="" width="100px"></button>
+            </div>
+            <div class="right">
+                <button class="settings"><i class="material-icons">settings</i></button>
+                <button class="share"><i class="material-icons">open_in_new</i></button>
+                <button class="favorite"><i class="material-icons" style="color:red">favorite</i></button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div><button class="play"><i class="material-icons" style="font-size:35px">play_arrow</i></button></div>
+            <div class="progress">
+                <div class="progress-filled"></div>
+                <div class="point">
+                    <div class="timer"><button class="timing">00:00</button></div>
+                </div>
+            </div>
+            <div><button class="time">15:56</button></div>
+            <div><button data-skip="10" class="skip"><i class="material-icons">fast_forward</i></button></div>
+            <div class="volume">
+                <button><i class="material-icons">volume_up</i></button>
+                <div class="volume-scrub" style="display:none">
+                    <!--<div class="volume-filler"></div>
+                    <div class="volume-filled"></div>-->
+                    <input type="range" orient="vertical" name="volume" class="volume-slider" min="0" max="1" step="0.05" value="1" />
+                </div>
+            </div>
+            <div class="quality">
+                <button>1080p</button>
+                <div class="qualities" style="display:none">
+                    <button>1080p</button>
+                    <br>
+                    <button>720p</button>
+                </div>
+            </div>
+            <div class="cc">
+                <button>
+                  <i class="material-icons">closed_caption</i>
+                </button>
+                <div class="captions" style="display:none">
+                    <button>ENG</button>
+                    <br>
+                    <button>None</button>
+                </div>
+            </div>
+            <div class="expand">
+                <button class="fullscreen"><img src="img/full.png" alt="" width="35px"></button>
+                <button class="reduce" style="display:none"><img src="img/full.png" alt="" width="35px"></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
