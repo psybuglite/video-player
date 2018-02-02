@@ -1,4 +1,4 @@
-# VIDEO PLAYER #
+## VIDEO PLAYER #
 
 ### Custom HTML5 Player with HTML5, CSS and Vanilla JavaScript ###
 
